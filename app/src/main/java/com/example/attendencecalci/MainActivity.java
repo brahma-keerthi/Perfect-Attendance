@@ -1,8 +1,13 @@
 package com.example.attendencecalci;
 
+import static android.text.TextUtils.isEmpty;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         editText3 = findViewById(R.id.editTextNumber3);
         textView = findViewById(R.id.textView);
 
+        editText1.addTextChangedListener(buttonEnabler);
+        editText2.addTextChangedListener(buttonEnabler);
+        editText3.addTextChangedListener(buttonEnabler);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +65,27 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Thanks for using", Toast.LENGTH_SHORT).show();
                 }
             }
+
         });
     }
+    private TextWatcher buttonEnabler = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            String a = editText1.getText().toString();
+            String b = editText2.getText().toString();
+            String c = editText3.getText().toString();
+
+            button.setEnabled(!a.isEmpty() && !b.isEmpty() && !c.isEmpty());
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+    };
 }

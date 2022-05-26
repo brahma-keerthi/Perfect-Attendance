@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="#abdedc"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/editTextNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Total Classes"
         android:inputType="number"
@@ -35,38 +35,41 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="302dp"
-        android:layout_height="123dp"
+        android:layout_width="276dp"
+        android:layout_height="93dp"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="114dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="16dp"
         android:text="Made by Sir-J"
         android:textAlignment="center"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/purple_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
 
@@ -81,4 +84,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="256dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/main_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
