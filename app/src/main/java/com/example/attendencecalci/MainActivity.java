@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             String b = editText2.getText().toString();
             String c = editText3.getText().toString();
 
-            button.setEnabled(!a.isEmpty() && !b.isEmpty() && !c.isEmpty());
+            button.setEnabled(!a.isEmpty() && !b.isEmpty() && !c.isEmpty() && a.length() < 5 && b.length()<5 && Integer.parseInt(c)<100);
         }
 
         @Override
